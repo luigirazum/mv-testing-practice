@@ -40,3 +40,44 @@ describe('Add operations with Calculator', () => {
     expect(addResult).toBe(2);
   });
 });
+
+describe('Substract operations with Calculator', () => {
+  test('Substract 1 - 0 is equal to 1', () => {
+    // Arrange
+    const a = 1;
+    const b = 0;
+    const calculator = new Calculator();
+
+    // Act
+    const substractResult = calculator.substract(a, b);
+
+    // Assert
+    expect(substractResult).toBe(1);
+  });
+
+  test('Substract 1 - 1 is equal to 0', () => {
+    // Arrange
+    const a = 1;
+    const b = 1;
+    const calculator = new Calculator();
+
+    // Act
+    const substractResult = calculator.substract(a, b);
+
+    // Assert
+    expect(substractResult).toBe(0);
+  });
+
+  test('Substract 2 - 1 is equal to 1', () => {
+    // Arrange
+    const a = 2;
+    const b = 1;
+    const calculator = new Calculator();
+
+    // Act
+    const substractResult = calculator.substract(a, b);
+
+    // Assert
+    expect(substractResult).toBe(1);
+  });
+});
