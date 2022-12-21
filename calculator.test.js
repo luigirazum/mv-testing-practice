@@ -122,3 +122,44 @@ describe('Multiply operations with Calculator', () => {
     expect(multiplyResult).toBe(2);
   });
 });
+
+describe('Divide operations with Calculator', () => {
+  test('Divide 1 / 0 throws an Error', () => {
+  // Arrange
+    const a = 1;
+    const b = 0;
+    const calculator = new Calculator();
+
+    // Act
+    const divideResult = () => calculator.divide(a, b);
+
+    // Assert
+    expect(divideResult).toThrow(Error);
+  });
+
+  test('Divide 1 / 1 is equal to 1', () => {
+    // Arrange
+    const a = 1;
+    const b = 1;
+    const calculator = new Calculator();
+
+    // Act
+    const divideResult = calculator.divide(a, b);
+
+    // Assert
+    expect(divideResult).toBe(1);
+  });
+
+  test('Divide 2 / 1 is equal to 2', () => {
+    // Arrange
+    const a = 2;
+    const b = 1;
+    const calculator = new Calculator();
+
+    // Act
+    const divideResult = calculator.divide(a, b);
+
+    // Assert
+    expect(divideResult).toBe(2);
+  });
+});
