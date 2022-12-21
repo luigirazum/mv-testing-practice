@@ -57,12 +57,56 @@ describe('Tests for one word string', () => {
     // Assert
     expect(stringCapitalized).toMatch(/Capitalize/);
   });
+
+  test('string "CAPITALIZE" should be returned as "Capitalize"', () => {
+    // Arrange
+    const string = 'CAPITALIZE';
+
+    // Act
+    const stringCapitalized = capitalize(string);
+
+    // Assert
+    expect(stringCapitalized).toMatch(/Capitalize/);
+  });
+
+  test('string "cApiTAlIze" should be returned as "Capitalize"', () => {
+    // Arrange
+    const string = 'cApiTAlIze';
+
+    // Act
+    const stringCapitalized = capitalize(string);
+
+    // Assert
+    expect(stringCapitalized).toMatch(/Capitalize/);
+  });
 });
 
 describe('Tests for one word string', () => {
   test('string "hello world" should be returned as "Hello World"', () => {
     // Arrange
     const string = 'hello world';
+
+    // Act
+    const stringCapitalized = capitalize(string);
+
+    // Assert
+    expect(stringCapitalized).toMatch(/Hello World/);
+  });
+
+  test('string "HELLO WORLD" should be returned as "Hello World"', () => {
+    // Arrange
+    const string = 'HELLO WORLD';
+
+    // Act
+    const stringCapitalized = capitalize(string);
+
+    // Assert
+    expect(stringCapitalized).toMatch(/Hello World/);
+  });
+
+  test('string "hElLo wORlD" should be returned as "Hello World"', () => {
+    // Arrange
+    const string = 'hElLo wORlD';
 
     // Act
     const stringCapitalized = capitalize(string);
