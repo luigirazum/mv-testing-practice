@@ -81,3 +81,44 @@ describe('Substract operations with Calculator', () => {
     expect(substractResult).toBe(1);
   });
 });
+
+describe('Multiply operations with Calculator', () => {
+  test('Multiply 1 * 0 is equal to 0', () => {
+  // Arrange
+    const a = 1;
+    const b = 0;
+    const calculator = new Calculator();
+
+    // Act
+    const multiplyResult = calculator.multiply(a, b);
+
+    // Assert
+    expect(multiplyResult).toBe(0);
+  });
+
+  test('Multiply 1 * 1 is equal to 1', () => {
+    // Arrange
+    const a = 1;
+    const b = 1;
+    const calculator = new Calculator();
+
+    // Act
+    const multiplyResult = calculator.multiply(a, b);
+
+    // Assert
+    expect(multiplyResult).toBe(1);
+  });
+
+  test('Multiply 2 * 1 is equal to 2', () => {
+    // Arrange
+    const a = 2;
+    const b = 1;
+    const calculator = new Calculator();
+
+    // Act
+    const multiplyResult = calculator.multiply(a, b);
+
+    // Assert
+    expect(multiplyResult).toBe(2);
+  });
+});
