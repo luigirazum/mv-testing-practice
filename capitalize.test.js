@@ -46,4 +46,28 @@ describe('Tests for one word string', () => {
     // Assert
     expect(stringCapitalized).toMatch(/A/);
   });
+
+  test('string "capitalize" should be returned as "Capitalize"', () => {
+    // Arrange
+    const string = 'capitalize';
+
+    // Act
+    const stringCapitalized = capitalize(string);
+
+    // Assert
+    expect(stringCapitalized).toMatch(/Capitalize/);
+  });
+});
+
+describe('Tests for one word string', () => {
+  test('string "hello world" should be returned as "Hello World"', () => {
+    // Arrange
+    const string = 'hello world';
+
+    // Act
+    const stringCapitalized = capitalize(string);
+
+    // Assert
+    expect(stringCapitalized).toMatch(/Hello World/);
+  });
 });
